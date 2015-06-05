@@ -2,7 +2,7 @@
 [   HackTrade version 1.4
 [   Nano-framework for HFT-robots development.
 [   -----------------------------------------------------------
-[   © 2014 Denis Kolodin
+[   В© 2014 Denis Kolodin
 [
 []]--
 
@@ -76,7 +76,7 @@ MarketData = {}
 function MarketData._pvconverter(elem)
   local nelem = {}
   nelem.price = tonumber(elem.price)
-  nelem.volume = tonumber(elem.volume)
+  nelem.quantity = tonumber(elem.quantity)
   return nelem
 end
 function MarketData:init()
@@ -243,7 +243,7 @@ function SmartOrder:process()
       cancel = true
     end
     if order.active == false then
-      -- Считаем после установки флага!!!
+      -- Г‘Г·ГЁГІГ ГҐГ¬ ГЇГ®Г±Г«ГҐ ГіГ±ГІГ Г­Г®ГўГЄГЁ ГґГ«Г ГЈГ !!!
       filled = order.filled * order.sign
       self.position = self.position + filled
       self.order = nil
